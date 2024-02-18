@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  background-color: hsl(218, 23%, 16%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-box {
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  border-radius: 10px;
+  background-color: hsl(217, 19%, 24%);
+  width: 500px;
+  height: 250px;
+  margin: auto; /* Center the container horizontally */
 }
 
-.App-link {
-  color: #61dafb;
+.img-divider {
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  height: auto;
+  width: 90%;
+  max-width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container-box h1 {
+  font-size: 14px;
+  color: hsl(150, 100%, 66%);
+  text-align: center;
+}
+
+.container-box p {
+  font-size: 20px;
+  color: hsl(193, 38%, 86%);
+  text-align: center;
+}
+
+.container-title {
+  margin-bottom: 20px; 
+}
+
+
+.generate-button {
+  position: relative;
+  padding: 10px;
+  background-color:hsl(150, 100%, 66%);
+  border-radius: 50px;
+  bottom: -70px; 
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .container-box {
+    width: 70%; /* Adjust width for mobile */
+    
   }
-  to {
-    transform: rotate(360deg);
+
+  .container-box h1 {
+    font-size: 12px; /* Adjust font size for mobile */
+  }
+
+  .container-box p {
+    font-size: 16px; /* Adjust font size for mobile */
+  }
+
+  .generate-button-container {
+    width: 50px; /* Adjust width for mobile */
+    height: 50px; /* Adjust height for mobile */
+    margin-bottom: 20px; /* Add margin bottom to create space between button and text */
+  }
+
+  .generate-button-container::before {
+    width: 90px; /* Adjust width for mobile */
+    height: 100px; /* Adjust height for mobile */
+  }
+
+  .generate-button {
+    margin-bottom: -10px;
+    width: 30px; /* Adjust width for mobile */
+    height: 30px; /* Adjust height for mobile */
   }
 }
